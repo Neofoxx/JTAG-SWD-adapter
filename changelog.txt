@@ -1,0 +1,29 @@
+V1:
+
+- An add-on board for the FT2232H-56Q Mini-Module
+- Includes only voltage translators, series/pull-down resistors and status LEDs
+
+Changelog for V2:
+
+- V2 was never finished.
+- Idea was to add ESD protection, and a PowerSupply stage
+-- ESD - quad ESD diodes, for 5V max.
+-- Power supply - 600mA Step-down DCDC, 5V/3.3V/2.5V/1.8V options.
+-- Selectable through DIP switched on the inside.
+
+Changes from V2 to V3:
+
+- Raw FT2232 chip
+- ESD now SRV05-4 instead of PGB1010603 (3pF instead of 0.4pF)
+- USB C CONNECTOR!
+- Through hole LEDs - saves a fortune on light guides
+- Added open soldermask on select edges - should help with ESD
+- Power supply section added for powering the target
+- Most resistors changed to resistor array (4x0603)
+
+Changelog for V4:
+
+- DCDC converter in the power supply changed to a more suitable one.
+- Fixed wiriing error on the USB connector
+- Added status LEDs for the second UART channel (RX&TX LEDs)
+- Removed dual footprints for the EEPROM
