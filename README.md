@@ -2,13 +2,13 @@
 Universal JTAG/SWD/UART adapter based on FT2232H
 
 #### PCB view
-![alt text](Pictures/Board_view.png "PCB view")
+![Rendering of adapter PCB showing all components installed except the USB port and output header.](Pictures/Board_view.png "PCB view")
 
 #### Finished product
-![alt text](Pictures/Board_finished.jpg "Finished view")
+![Photo of finished adapter PCB installed in an open enclosure.](Pictures/Board_finished.jpg "Finished view")
 
 ### Pinout
-![alt text](Pictures/Pinout.png "Pinout")
+![Diagram of 20-pin output connector pinout: pins 1 and 2 tied to a resistor to VCC; 4, 6, 8, 10, 12, and 14 are tied to ground; 3 nTRST; 5 TDI; 7 TMS/SWDIO; 9 TCK/SWCLK; 11 RTCK; 13 TDO/SWO; 15 nSRST/RST; 16 UART_RTS, 17 UART_RX, 18 UART_DTR, 19 UART_TX, and 20 UART_CTS.](Pictures/Pinout.png "Pinout")
 
 
 ## Description
@@ -52,7 +52,7 @@ Use the provided "Neofoxx FT-Prog template.xml".
 - Confirm the device has the proper parameters.
 - Success!
 
-![alt text](Pictures/FT-Prog.png "FT-Prog")
+![Screenshot of FT Prog program showing Device 0 contextual menu with "Apply Template" then "From File" selected.](Pictures/FT-Prog.png "FT-Prog")
 
 ### Linux
 
@@ -84,17 +84,17 @@ Use the provided "Neofoxx FT-Prog template.xml".
 
 ### Windows
 
-- If you want to use the adapter with OpenOCD under Windows, you will have to change its drievr from the FTDI one a WinUSB one.
-- Download zadig from here: https://zadig.akeo.ie/
+- If you want to use the adapter with OpenOCD under Windows, you will have to change its driver from the FTDI one to a WinUSB one.
+- Download Zadig from here: https://zadig.akeo.ie/
 - Run the tool.
 - If necessary, in the Options menu, select "List All Devices"
 - Select "Neofoxx JTAG/SWD adapter (Interface 0)"
 - Select WinUSB, then click Replace Driver.
 - Done!
 - Note, if you have multiple adapters connected at the same time and want to use them, you have to do this on all of them.
-- If the adapter suddenly stops working under Windows, fist check if the driver has changed. Windows have a nasty habit of changing things without telling you.
+- If the adapter suddenly stops working under Windows, first check if the driver has changed. Windows have a nasty habit of changing things without telling you.
 
-![alt text](Pictures/Zadig.png "Zadig")
+![Screenshot of Zadig program showing the Neofoxx JTAG/SWD adapter selected and driver being replaced with WinUSB.](Pictures/Zadig.png "Zadig")
 
 ## Normal operation and things to look out for
 
@@ -121,4 +121,3 @@ Be warned, the housing was designed with minimal tolerances, so it might be a sn
 - Fixup ftdi_eeprom & FT-Prog differences
 - Update schematic to newer version of KiCad, and not use rescue symbols.
 - Test the power section & enabling via the FTDI. As it is, that is UNTESTED
-
